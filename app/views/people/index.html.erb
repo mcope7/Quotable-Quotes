@@ -1,0 +1,15 @@
+<h1>Quotable Quotes</h1>
+<%= link_to 'All Quotable Quotes', quotes_path %> |
+<%= link_to 'Guess a Quote', :controller => 'quotes', :action => 'show', :id => "#{Quote.random_quote}" %> |
+<%= link_to 'Home', root_path %>
+<br />
+<br />
+
+<h3>Authors</h3>
+<ul>
+  <% @people.each do |person| %>
+    <li>
+      <%=h person.name %> &nbsp;&nbsp;<%= link_to 'Quotes', person %>
+    </li>
+  <% end %>
+</ul>

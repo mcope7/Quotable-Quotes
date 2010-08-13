@@ -1,0 +1,20 @@
+<h1>Guess a Quote</h1>
+
+<%= link_to 'All Quotable Quotes', quotes_path %> |
+<%= link_to 'Authors', authors_path %> |
+<%= link_to 'Home', root_path %>
+<br />
+<br />
+
+<h3>Who said this?</h3>
+
+<p>
+  <%=h @quote.text %>&nbsp;&nbsp;-- <i id="author" style="display:none;"><%= @quote.person.name %></i> --
+</p>
+<form>
+<input type="button" value="Reveal author" onclick="show();"></input>
+</form>
+<br />
+<br />
+<%= link_to 'Try again', :controller => 'quotes', :action => 'show', :id => "#{Quote.random_quote}" %>
+

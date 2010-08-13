@@ -1,0 +1,21 @@
+Quotable Quotes was setup to the following requirements:
+
+Attached is a file that contains a list of people and their quotes.  You can safely assume that if a person is listed two or more times that it is the same person.
+
+I would like you to build me a rails app (2.3.8 or rails 3 beta) that allows me to:
+
+    * View the people
+    * View the quotes
+    * View a person and their quotes
+    * Add a new quote to a person
+
+
+Don’t worry too much about the UI, but try and make it something beyond the basic rails scaffolding.  Bonus points for using jQuery in some way.
+Also think of something creative to add beyond the scope of what is listed above.
+
+A MySQL database was used for development. The name of the development database is 'dev_quotable' and it contains two tables. A rake db:migrate 
+should be able to set up the two tables, 'people' and 'quotes', properly. Another rake task, rake db:load_quotes, will initially populate the
+tables from the 'quotes.txt' file found in the 'public/' folder. jQuery was used to reveal the author for guessing the person responsible for a
+randomly selected quote. That was the creative function. I didn't have time to work on the RSpecs, so failures will occur if a straight rake is
+used. The failures come from tests generated against the routing and views from the scaffold generation. I used Rails 2.3.8 for this development.
+

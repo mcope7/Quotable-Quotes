@@ -1,0 +1,6 @@
+<h1>Quotable Quotes</h1>
+<div id="nav_container">
+  <%= link_to 'All Quotable Quotes', quotes_path %> |
+  <%= link_to 'Authors', authors_path %> |
+  <%= link_to 'Guess a Quote', :controller => 'quotes', :action => 'show', :id => "#{Quote.random_quote}" %>
+</div>
