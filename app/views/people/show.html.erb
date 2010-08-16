@@ -1,19 +1,22 @@
-<p>
-  <h1><%=h @person.name %></h1>
-</p>
-
-<%= link_to 'New Quote', :controller => 'quotes', :action => 'new', :id => @person.id %> |
-<%= link_to 'All Quotable Quotes', quotes_path %> |
-<%= link_to 'Guess a Quote', :controller => 'quotes', :action => 'show', :id => "#{Quote.random_quote}" %> |
-<%= link_to 'Home', root_path %>
-
-<h3>Quotable Quotes <%= flash[:notice] %></h3>
-
-<ul>
-<% @person.quotes.each do |quote| %>
-  <li>
-    <%=h quote.text %>
-  </li>
-<% end %>
-</ul>
-<%= link_to 'Back to Authors', authors_path %>
+<div id="header">
+  <p>
+    <h1><%=h @person.name %></h1>
+  </p>
+</div>
+<div id="content">
+  <%= link_to 'New Quote', :controller => 'quotes', :action => 'new', :id => @person.id %> |
+  <%= link_to 'All Quotable Quotes', quotes_path %> |
+  <%= link_to 'Guess a Quote', :controller => 'quotes', :action => 'show', :id => "#{Quote.random_quote}" %> |
+  <%= link_to 'Home', root_path %>
+  
+  <h3>Quotable Quotes <%= flash[:notice] %></h3>
+  
+  <ul>
+  <% @person.quotes.each do |quote| %>
+    <li>
+      <%=h quote.text %>
+    </li>
+  <% end %>
+  </ul>
+  <%= link_to 'Back to Authors', authors_path %>
+</div>

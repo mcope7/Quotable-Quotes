@@ -1,10 +1,40 @@
-body { background-color: #fff; color: #333; }
+html {
+  background-color:#DBE5EB
+}
 
-body, p, ol, ul, td {
+body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
+  width:750px;
+  margin:0 auto;
+  margin-top:30px;
   line-height: 18px;
+  background-color: #DBE5EB
 }
+
+#header {
+  width:750px;
+  height:60;
+  padding: 5px 10px;
+  background-color:#B2DBF6;
+}
+
+#content { 
+  width:750px;
+  background-color:#CFE9FA;
+  min-height:500px; /* for modern browsers */
+  height:auto !important; /* for modern browsers */
+  height:500px; /* for IE5.x and IE6 */
+  padding: 5px 10px;
+}
+
+#footer { 
+  width:750px;
+  height:100px;
+  background-color:#B2DBF6;
+  padding: 5px 10px;
+}
+
 
 pre {
   background-color: #eee;
